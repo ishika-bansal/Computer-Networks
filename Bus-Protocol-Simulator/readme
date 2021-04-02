@@ -1,0 +1,11 @@
+To create scenario and study the performance of token bus protocol through simulation.
+
+Algorithm to implement:
+1. Create a simulator object
+2. Define different colors for different data flows
+3. Open a nam trace file and define finish procedure then close the trace file,and execute nam on trace file.
+4. Create five nodes that forms a network numbered from 0 to 4
+5. Create duplex links between the nodes and add Orientation to the nodes for setting a LAN topology
+6. Setup TCP Connection between n(1) and n(3)
+7. Apply CBR Traffic over TCP.
+8. Schedule events and run the program.
