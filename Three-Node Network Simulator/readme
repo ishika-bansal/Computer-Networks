@@ -1,0 +1,1 @@
+Simulate a three node point to point network with duplex links between them. Set queue size and vary the bandwidth. Calculate the network performance parameters like number of packets dropped, throughput, packet delivery ratio using AWK script and generate a graph using GNUPLOT.
