@@ -1,0 +1,25 @@
+Install Network Simulator (NS3 latest version) and NetAnim, Implement the following experiment using NS3.
+	
+	a. Basic client server paradigm. Reading pcap traces. 
+
+	Steps to implement:
+    1. Create a simple topology of two nodes (Node1, Node2) separated by a point-to-point link. 
+    2. Setup a UdpClient on one Node1 and a UdpServer on Node2. Let it be of a fixed data rate Rate1. 
+    3. Start the client application, and measure end to end throughput whilst varying the latency of the link 
+    4. Now add another client application to Node1 and a server instance to Node2. What do you need to configure to ensure that there is no conflict? 
+    5. Repeat step 3 with the extra client and server application instances. Show screenshots of pcap traces which indicate that delivery is made to the appropriate server instance. 
+	b. Program in NS3 to implement star topology.
+	
+	c. Program in NS3 to implement a bus topology.
+          
+	d. TCP internals and the difference between each of the variants. NS-3 tracing mechanism. 
+          Steps to implement:
+    1. Create a simple dumbbell topology, two client Node1 and Node2 on the left side of the dumbbell and server nodes Node3 and Node4 on the right side of the dumbbell. Let Node5 and Node6 form the bridge of the dumbbell. Use point to point links. 
+    2. Install a TCP socket instance on Node1 that will connect to Node3. 
+    3. Install a UDP socket instance on Node2 that will connect to Node4. 
+    4. Start the TCP application at time 1s. 
+    5. Start the UDP application at time 20s at rate Rate1 such that it clogs half the dumbbell bridge's link capacity. 
+    6. Increase the UDP application's rate at time 30s to rate Rate2 such that it clogs the whole of the dumbbell bridge's capacity. 
+    7. Use the ns-3 tracing mechanism to record changes in congestion window size of the TCP instance over time. Use gnuplot to visualise plots of cwnd vs time. 
+    8. Mark points of fast recovery and slow start in the graphs. 
+    9. Perform the above experiment for TCP variants Tahoe, Reno and New Reno, all of which are available with ns-3.
